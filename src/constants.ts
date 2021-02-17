@@ -6,15 +6,18 @@ const RISK_MANAGEMENT_W_FEES = "risk-mgmt-w-fees";
 const SCREENS: Screen[] = [
   {
     key: RISK_REWARD_RATIO,
-    title: "Risk Reward Ratio",
+    title: "Risk/Reward Ratio",
+    description: "Checks if risk/reward ratio is reasonable."
   },
   {
     key: RISK_MANAGEMENT_SIMPLE,
-    title: "Risk Management (Simple)",
+    title: "Risk Management",
+    description: "Calculates the amount of shares to buy."
   },
   {
     key: RISK_MANAGEMENT_W_FEES,
     title: "Risk Management (w/ Fees)",
+    description: "Calculates the amount of shares to buy when fees are included."
   },
 ];
 

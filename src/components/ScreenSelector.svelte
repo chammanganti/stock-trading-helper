@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { activeScreen } from "../store";
   import type { Screen } from "../types/Screen";
+  import ScreenSelectorItem from "./ScreenSelectorItem.svelte";
 
   export let screens: Screen[];
-
-  function selectScreen(screenKey: string) {
-    activeScreen.update(() => screenKey);
-  }
 </script>
 
-<div class="grid grid-cols-3">
-  {#each screens as screen (screen.key)}
-    <div on:click={() => selectScreen(screen.key)}>{screen.title}</div>
-  {/each}
+<div class="flex h-screen align-middle">
+  <div class="m-auto">
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center">
+      {#each screens as screen (screen.key)}
+        <ScreenSelectorItem {screen} />
+      {/each}
+    </div>
+  </div>
 </div>

@@ -3,7 +3,7 @@ KUBECONFIG := .circleci/kube
 REPOSITORY := chammanganti
 TAG := $(shell git log -1 --pretty=format:%h)
 VALUES := values.yaml
-NAMESPACE := project-$(PROJECT)
+NAMESPACE := project-sth
 
 all: help
 

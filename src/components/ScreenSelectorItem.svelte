@@ -11,7 +11,7 @@
 </script>
 
 <div class="m-4">
-  <Card bg="bg-white" roundness="rounded-xl" shadow="shadow-md">
+  <Card roundness="rounded-xl" shadow="shadow-md">
     <div class="text-center mb-8">
       <h1 class="text-xl font-bold">{screen.title}</h1>
       <span class="text-xs text-gray-700">{screen.description}</span>

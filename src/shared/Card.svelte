@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let bg = "";
+  export let bg = "bg-white";
   export let roundness = "";
   export let shadow = "";
 </script>

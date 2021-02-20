@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { RISK_REWARD_RATIO } from "../constants";
-
   import Back from "../shared/Back.svelte";
+  import Button from "../shared/Button.svelte";
   import Card from "../shared/Card.svelte";
   import Form from "../shared/Form.svelte";
   import FormInputNumber from "../shared/FormInputNumber.svelte";
@@ -50,14 +49,8 @@
           bind:value={stopLoss}
         />
         <RiskRewardRatioBar {reward} />
-        <div class="text-right">
-          <button
-            class="bg-gray-300 hover:bg-gray-400 hover:shadow-md px-4 py-2 mt-8 rounded-sm text-gray-800 font-bold uppercase transition ease-in duration-300"
-            on:click|preventDefault={() => reset()}
-          >
-            Reset
-          </button>
-        </div>
+        <div class="mt-6" />
+        <Button raised={true} on:click={() => reset()}>Reset</Button>
       </Form>
     </Card>
   </div>

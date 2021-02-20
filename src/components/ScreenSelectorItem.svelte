@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Button from "../shared/Button.svelte";
+
   import Card from "../shared/Card.svelte";
   import { activeScreen } from "../store";
   import type { Screen } from "../types/Screen";
@@ -17,8 +19,11 @@
       <span class="text-xs text-gray-700">{screen.description}</span>
     </div>
     <div class="text-right">
-      <button
-        class="bg-blue-600 hover:bg-blue-700 rounded-full shadow-xs hover:shadow-md p-2 transition ease-in duration-300"
+      <Button
+        color="blue"
+        colorLevel={600}
+        raised={true}
+        roundness="rounded-full"
         on:click={() => selectScreen(screen.key)}
       >
         <div class="flex">
@@ -36,7 +41,7 @@
             />
           </svg>
         </div>
-      </button>
+      </Button>
     </div>
   </Card>
 </div>

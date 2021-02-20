@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { toFloat } from "../helper";
+
   import Back from "../shared/Back.svelte";
   import Button from "../shared/Button.svelte";
   import Card from "../shared/Card.svelte";
@@ -13,7 +15,7 @@
   $: rewardDiff = targetPrice - entryPrice;
   $: riskDiff = entryPrice - stopLoss;
 
-  $: rw = parseFloat((rewardDiff / riskDiff).toFixed(2));
+  $: rw = toFloat(rewardDiff / riskDiff, 2);
   $: reward = isFinite(rw) === true ? rw : 0;
 
   function reset() {

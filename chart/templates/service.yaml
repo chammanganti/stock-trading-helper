@@ -1,0 +1,16 @@
+apiVersion: {{ .Values.global.apiVersion }}
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-service
+  labels:
+{{ include "stock-trading-helper.labels" . | indent 4 }}
+
+spec:
+  selector:
+{{ include "stock-trading-helper.labels" . | indent 4 }}
+  {{- with .Values.service }}
+  ports:
+    - port: {{ .port }}
+      targetPort: {{ .targetPort }}
+  type: {{ .type }}
+  {{- end }}

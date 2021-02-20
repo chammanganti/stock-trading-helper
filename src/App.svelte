@@ -10,6 +10,13 @@
     SCREENS,
   } from "./constants";
   import { activeScreen } from "./store";
+  import { onDestroy } from "svelte";
+
+  const subscription = activeScreen.subscribe((v) => {
+    localStorage.setItem("sth_active", v);
+  });
+
+  onDestroy(subscription);
 </script>
 
 <main>

@@ -49,17 +49,17 @@
         />
         <FormTextField>
           <span slot="label">Amount to risk</span>
-          <p slot="value">{amountToRisk}</p>
+          <p class="text-right" slot="value">{amountToRisk}</p>
         </FormTextField>
         <FormInputNumber label="Entry Price" bind:value={entryPrice} />
         <FormInputNumber label="Stop Loss" bind:value={stopLoss} />
         <FormTextField>
           <span slot="label">Risk</span>
-          <p slot="value">{risk}</p>
+          <p class="text-right" slot="value">{risk}</p>
         </FormTextField>
         <FormTextField>
           <span slot="label">Shares to buy</span>
-          <p class="font-bold" slot="value">
+          <p class="font-bold text-right" slot="value">
             {sharesToBuy}
             <span class="text-gray-600">({totalAmount})</span>
           </p>

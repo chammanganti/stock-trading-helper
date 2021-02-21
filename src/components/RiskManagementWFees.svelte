@@ -16,9 +16,9 @@
   let sellingFees: number = 0;
 
   $: amountToRisk = capital * (capitalRiskPercentage / 100);
-  $: entryPriceFee = entryPrice * buyingFees;
+  $: entryPriceFee = entryPrice * (buyingFees / 100);
   $: adjustedEntryPrice = toFloat(entryPrice + entryPriceFee, 2);
-  $: stopLossFee = stopLoss * sellingFees;
+  $: stopLossFee = stopLoss * (sellingFees / 100);
   $: adjustedStopLoss = toFloat(stopLoss - stopLossFee, 2);
   $: risk = toFloat(adjustedEntryPrice - adjustedStopLoss, 2);
   $: shares = Math.floor(amountToRisk / risk);
